@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eleves",
+  "info": {
+    "singularName": "eleve",
+    "pluralName": "eleves",
+    "displayName": "Eleve",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Sexe": {
+      "type": "string"
+    },
+    "Naissance": {
+      "type": "string"
+    },
+    "classe": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::classe.classe",
+      "inversedBy": "eleve"
+    },
+    "evaluations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evaluation.evaluation"
+    }
+  }
+}

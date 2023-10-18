@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "classe",
+    "pluralName": "classes",
+    "displayName": "classe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Classe": {
+      "type": "string"
+    },
+    "evaluations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evaluation.evaluation"
+    },
+    "eleve": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::eleve.eleve",
+      "mappedBy": "classe"
+    }
+  }
+}
