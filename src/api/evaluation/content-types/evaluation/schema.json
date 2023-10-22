@@ -12,16 +12,29 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "exercices": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::validation.validation"
-    },
     "Nom": {
       "type": "string"
     },
     "Date": {
       "type": "date"
+    },
+    "classe": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::classe.classe",
+      "inversedBy": "evaluations"
+    },
+    "progression": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::progression.progression",
+      "mappedBy": "evaluation"
+    },
+    "exercices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exercice.exercice",
+      "mappedBy": "evaluation"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "completion",
     "pluralName": "completions",
-    "displayName": "completion"
+    "displayName": "completion",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,31 @@
   "attributes": {
     "contenu": {
       "type": "string"
+    },
+    "progression": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::progression.progression",
+      "inversedBy": "completions"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    },
+    "reponse": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reponse.reponse"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "creation": {
+      "type": "datetime"
+    },
+    "reprise": {
+      "type": "datetime"
     }
   }
 }

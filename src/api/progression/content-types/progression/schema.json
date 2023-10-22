@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progressions",
+  "info": {
+    "singularName": "progression",
+    "pluralName": "progressions",
+    "displayName": "progression"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eleve": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::eleve.eleve",
+      "inversedBy": "progression"
+    },
+    "evaluation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evaluation.evaluation",
+      "inversedBy": "progression"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "debut": {
+      "type": "datetime"
+    },
+    "fin": {
+      "type": "datetime"
+    },
+    "creation": {
+      "type": "datetime"
+    },
+    "reprise": {
+      "type": "datetime"
+    },
+    "contenu": {
+      "type": "string"
+    },
+    "completions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completion.completion",
+      "mappedBy": "progression"
+    }
+  }
+}

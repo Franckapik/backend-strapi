@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "validations",
+  "collectionName": "exercices",
   "info": {
-    "singularName": "validation",
-    "pluralName": "validations",
-    "displayName": "Exercice",
+    "singularName": "exercice",
+    "pluralName": "exercices",
+    "displayName": "exercice",
     "description": ""
   },
   "options": {
@@ -15,7 +15,7 @@
     "titre": {
       "type": "string"
     },
-    "consigne": {
+    "contenu": {
       "type": "richtext"
     },
     "competences": {
@@ -29,14 +29,23 @@
       "target": "api::question.question",
       "mappedBy": "exercice"
     },
-    "score_total": {
-      "type": "integer"
-    },
     "reponses": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::reponse.reponse",
       "mappedBy": "exercice"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "numero": {
+      "type": "integer"
+    },
+    "evaluation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::evaluation.evaluation",
+      "inversedBy": "exercices"
     }
   }
 }

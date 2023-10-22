@@ -30,17 +30,17 @@
     "contenu": {
       "type": "text"
     },
-    "exercice": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::validation.validation",
-      "inversedBy": "questions"
-    },
     "reponses": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::reponse.reponse",
       "mappedBy": "question"
+    },
+    "exercice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exercice.exercice",
+      "inversedBy": "questions"
     }
   }
 }

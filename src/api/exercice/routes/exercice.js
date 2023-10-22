@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * validation router
+ * exercice router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::validation.validation');
+module.exports = createCoreRouter('api::exercice.exercice');

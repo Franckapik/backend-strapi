@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * validation service
+ * exercice service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::validation.validation');
+module.exports = createCoreService('api::exercice.exercice');

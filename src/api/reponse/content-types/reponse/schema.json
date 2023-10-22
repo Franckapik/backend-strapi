@@ -18,17 +18,17 @@
       "target": "api::question.question",
       "inversedBy": "reponses"
     },
-    "exercice": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::validation.validation",
-      "inversedBy": "reponses"
-    },
     "correct": {
       "type": "boolean"
     },
     "contenu": {
       "type": "string"
+    },
+    "exercice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exercice.exercice",
+      "inversedBy": "reponses"
     }
   }
 }

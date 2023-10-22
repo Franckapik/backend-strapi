@@ -18,7 +18,8 @@
     "evaluations": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::evaluation.evaluation"
+      "target": "api::evaluation.evaluation",
+      "mappedBy": "classe"
     },
     "eleve": {
       "type": "relation",

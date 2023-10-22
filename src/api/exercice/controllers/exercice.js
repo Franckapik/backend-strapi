@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * validation controller
+ * exercice controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::validation.validation');
+module.exports = createCoreController('api::exercice.exercice');
