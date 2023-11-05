@@ -4,7 +4,8 @@
   "info": {
     "singularName": "progression",
     "pluralName": "progressions",
-    "displayName": "progression"
+    "displayName": "progression",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,7 +27,7 @@
     "status": {
       "type": "integer"
     },
-    "score": {
+    "points": {
       "type": "integer"
     },
     "debut": {
@@ -41,14 +42,21 @@
     "reprise": {
       "type": "datetime"
     },
-    "contenu": {
-      "type": "string"
-    },
     "completions": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::completion.completion",
       "mappedBy": "progression"
+    },
+    "classe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::classe.classe"
+    },
+    "validation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "validcomp.validation"
     }
   }
 }

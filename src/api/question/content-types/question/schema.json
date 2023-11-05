@@ -4,7 +4,8 @@
   "info": {
     "singularName": "question",
     "pluralName": "questions",
-    "displayName": "question"
+    "displayName": "question",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,20 +28,26 @@
     "score": {
       "type": "integer"
     },
-    "contenu": {
-      "type": "text"
-    },
-    "reponses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::reponse.reponse",
-      "mappedBy": "question"
-    },
     "exercice": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::exercice.exercice",
       "inversedBy": "questions"
+    },
+    "competence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::competence.competence",
+      "inversedBy": "questions"
+    },
+    "reponses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::reponse.reponse",
+      "mappedBy": "questions"
+    },
+    "contenu": {
+      "type": "string"
     }
   }
 }

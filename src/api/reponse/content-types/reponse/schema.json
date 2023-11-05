@@ -12,17 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question": {
+    "questions": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::question.question",
       "inversedBy": "reponses"
     },
     "correct": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     },
     "contenu": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "exercice": {
       "type": "relation",

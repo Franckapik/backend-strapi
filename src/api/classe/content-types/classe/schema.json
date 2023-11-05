@@ -15,17 +15,17 @@
     "Classe": {
       "type": "string"
     },
-    "evaluations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::evaluation.evaluation",
-      "mappedBy": "classe"
-    },
     "eleve": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::eleve.eleve",
       "mappedBy": "classe"
+    },
+    "evaluations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::evaluation.evaluation",
+      "mappedBy": "classes"
     }
   }
 }

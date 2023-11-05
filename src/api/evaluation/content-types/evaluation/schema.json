@@ -18,9 +18,9 @@
     "Date": {
       "type": "date"
     },
-    "classe": {
+    "classes": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::classe.classe",
       "inversedBy": "evaluations"
     },
@@ -35,6 +35,10 @@
       "relation": "oneToMany",
       "target": "api::exercice.exercice",
       "mappedBy": "evaluation"
+    },
+    "score": {
+      "type": "integer",
+      "default": 20
     }
   }
 }

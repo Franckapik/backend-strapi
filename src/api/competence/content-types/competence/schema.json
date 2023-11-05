@@ -17,6 +17,15 @@
     },
     "Number": {
       "type": "decimal"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "competence"
+    },
+    "Domaines": {
+      "type": "string"
     }
   }
 }

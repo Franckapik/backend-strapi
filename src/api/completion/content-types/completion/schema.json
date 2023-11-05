@@ -39,6 +39,19 @@
     },
     "reprise": {
       "type": "datetime"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "exercice": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::exercice.exercice"
+    },
+    "validation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "validcomp.validation"
     }
   }
 }

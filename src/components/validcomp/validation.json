@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_validcomp_validations",
+  "info": {
+    "displayName": "validation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "competence": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::competence.competence"
+    },
+    "niveau": {
+      "type": "integer",
+      "max": 4,
+      "min": 1,
+      "default": 1
+    }
+  }
+}
